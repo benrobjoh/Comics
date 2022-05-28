@@ -18,6 +18,7 @@ public class MarvelAPIClient {
         self.session = session
     }
 
+    // MARK: Authorization
     func authorizationQueryItems(requestDate: Date = .now) throws -> [URLQueryItem] {
         guard let publicKey = keyStore.publicKey,
               let privateKey = keyStore.privateKey else { throw URLError(.userAuthenticationRequired) }
@@ -44,6 +45,8 @@ public class MarvelAPIClient {
         ]
     }
 
+    // MARK: - Comics
+
     public func configureRequest<T: APIRequestConfiguration>(_ configuration: T,
                                                              requestDate: Date = .now) throws -> URLRequest {
         let authenticationQueryItems = try authorizationQueryItems(requestDate: requestDate)
@@ -57,7 +60,20 @@ public class MarvelAPIClient {
         return request
     }
 
-    public func executeRequest<T: APIRequestConfiguration>(_ configuration: T) async throws {
+    public func executeRequest<T: APIRequestConfiguration>(_ configuration: T) async throws -> T.Response {
+        let request = try configureRequest(configuration)
+        let (data, _) = try await session.data(for: request)
+        return try configuration.decodeResponse(data)
+    }
 
+    // MARK: - Images
+    
+    func configureImageRequest(from imageResponse: ImageResponse,
+                               variant: ImageResponse.Variant) throws -> URLRequest {
+        guard let path = imageResponse.path,
+                let pathExtension = imageResponse.extension else { throw URLError(.badURL) }
+        let urlString = "\(path)/\(variant.rawValue).\(pathExtension)"
+        guard let url = URL(string: urlString) else { throw URLError(.badURL) }
+        return URLRequest(url: url)
     }
 }
