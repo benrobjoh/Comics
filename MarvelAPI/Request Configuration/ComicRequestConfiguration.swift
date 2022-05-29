@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Configuration for requests to GET https://gateway.marvel.com/v1/public/comics/{comicId}"
 public struct ComicRequestConfiguration: APIRequestConfiguration {
     public typealias Response = ResponseWrapper<ComicResponse>
 

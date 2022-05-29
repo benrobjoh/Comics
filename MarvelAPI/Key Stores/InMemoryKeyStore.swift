@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// An in-memory key store. In production, this implementation could be replaced with one that interfaces with the system keychain
 public struct InMemoryKeyStore: KeyStore {
     public var publicKey: String?
     public var privateKey: String?

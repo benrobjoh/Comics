@@ -17,7 +17,7 @@ extension ComicViewController {
         @Published var coverImage: UIImage?
         @Published var needsAuthorizationKeys: Bool
         let authorizationViewModel = AuthorizationViewModel()
-        // Add default comicId here
+        // Set comicId here
         private var comicId = "41188"
         // Replace nil with keys API keys here or enter when running app
         private var client = MarvelAPIClient(keyStore: InMemoryKeyStore(publicKey: nil,
@@ -26,6 +26,7 @@ extension ComicViewController {
         init() {
             self.needsAuthorizationKeys = client.keyStore.needsKeys
         }
+        /// Loads the comic with id = `comicId`
         func loadComic() async {
             isSyncInProgress = true
             defer { isSyncInProgress = false }
@@ -45,6 +46,10 @@ extension ComicViewController {
             }
         }
 
+        /// Creates an attributed string to display information related to `comic`
+        /// - Parameters:
+        ///   - comic: The comic whose information should be displayed
+        ///   - attributionHTML: The HTML with attribution information
         func updateComicInfo(comic: ComicResponse,
                              attributionHTML: String?) {
             let info = NSMutableAttributedString(string: "")
@@ -92,10 +97,14 @@ extension ComicViewController {
             comicInfo = info
         }
 
+        /// Updates the cover image
+        /// - Parameter image: The image to set as the cover image
         func updateCoverImage(_ image: UIImage?) {
             coverImage = image
         }
 
+        /// Updates the error information so it shows in place of the comic information
+        /// - Parameter error: The error
         func updateError(_ error: Error) {
             comicInfo = NSAttributedString(string: error.localizedDescription,
                                            attributes: [
@@ -105,6 +114,10 @@ extension ComicViewController {
             coverImage = nil
         }
 
+        /// Updates the authorization keys
+        /// - Parameters:
+        ///   - publicKey: The new `publicKey`
+        ///   - privateKey: The new `privateKey`
         func updateKeys(publicKey: String?,
                         privateKey: String?) {
             client.keyStore = InMemoryKeyStore(publicKey: publicKey,
@@ -112,6 +125,7 @@ extension ComicViewController {
             needsAuthorizationKeys = client.keyStore.needsKeys
         }
 
+        /// Deletes the keys currently in the store
         func resetKeys() {
             client.keyStore = InMemoryKeyStore()
             needsAuthorizationKeys = client.keyStore.needsKeys

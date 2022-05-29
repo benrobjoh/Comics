@@ -8,6 +8,7 @@
 import Foundation
 
 public struct ImageResponse: Decodable {
+    /// Corresponds to available sizes of images from the API, as documented [here](https://developer.marvel.com/documentation/images)
     public enum Variant: String {
         case small = "portrait_small"
         case medium = "portrait_medium"
