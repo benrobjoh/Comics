@@ -22,7 +22,9 @@ Running the app requires a public and private key for the Marvel API. There are 
 1. Enter your public and private key in *ComicViewController+ViewModel.swift* in the initializer for the `MarvelAPIClient` on line 23.
 2. The app will prompt you to enter a public and private key if you run the app without completing step 1.
 
-Choose which comic's information you would like to view by entering the `comicId` on line 21 of *ComicViewController+ViewModel.swift*.
+Press the key button in the upper-left to delete the current keys and enter a new key.
+
+Choose which comic's information you would like to view by entering the `comicId` on line 21 of *ComicViewController+ViewModel.swift*. It defaults to "41188", **Avengers Vs. X-Men** #1.
 
 ## Running the tests
 
