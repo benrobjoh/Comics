@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA076B9F2843C07900342E52 /* ViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076B9E2843C07900342E52 /* ViewController+ViewModel.swift */; };
+		EA076B9F2843C07900342E52 /* ComicViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076B9E2843C07900342E52 /* ComicViewController+ViewModel.swift */; };
+		EA076BA12843F64300342E52 /* ComicViewController+AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076BA02843F64300342E52 /* ComicViewController+AuthorizationViewModel.swift */; };
 		EA10F87C2842777C004608FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F87B2842777C004608FC /* AppDelegate.swift */; };
 		EA10F87E2842777C004608FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F87D2842777C004608FC /* SceneDelegate.swift */; };
-		EA10F8802842777C004608FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F87F2842777C004608FC /* ViewController.swift */; };
+		EA10F8802842777C004608FC /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F87F2842777C004608FC /* ComicViewController.swift */; };
 		EA10F8832842777C004608FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA10F8812842777C004608FC /* Main.storyboard */; };
 		EA10F8852842777E004608FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA10F8842842777E004608FC /* Assets.xcassets */; };
 		EA10F8882842777E004608FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA10F8862842777E004608FC /* LaunchScreen.storyboard */; };
@@ -88,11 +89,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EA076B9E2843C07900342E52 /* ViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		EA076B9E2843C07900342E52 /* ComicViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		EA076BA02843F64300342E52 /* ComicViewController+AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComicViewController+AuthorizationViewModel.swift"; sourceTree = "<group>"; };
 		EA10F8782842777C004608FC /* Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA10F87B2842777C004608FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA10F87D2842777C004608FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA10F87F2842777C004608FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA10F87F2842777C004608FC /* ComicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
 		EA10F8822842777C004608FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA10F8842842777E004608FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA10F8872842777E004608FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -189,8 +191,9 @@
 			children = (
 				EA10F87B2842777C004608FC /* AppDelegate.swift */,
 				EA10F87D2842777C004608FC /* SceneDelegate.swift */,
-				EA10F87F2842777C004608FC /* ViewController.swift */,
-				EA076B9E2843C07900342E52 /* ViewController+ViewModel.swift */,
+				EA10F87F2842777C004608FC /* ComicViewController.swift */,
+				EA076BA02843F64300342E52 /* ComicViewController+AuthorizationViewModel.swift */,
+				EA076B9E2843C07900342E52 /* ComicViewController+ViewModel.swift */,
 				EA10F8812842777C004608FC /* Main.storyboard */,
 				EA10F8842842777E004608FC /* Assets.xcassets */,
 				EA10F8862842777E004608FC /* LaunchScreen.storyboard */,
@@ -480,10 +483,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA10F8802842777C004608FC /* ViewController.swift in Sources */,
+				EA10F8802842777C004608FC /* ComicViewController.swift in Sources */,
 				EA10F87C2842777C004608FC /* AppDelegate.swift in Sources */,
+				EA076BA12843F64300342E52 /* ComicViewController+AuthorizationViewModel.swift in Sources */,
 				EA10F87E2842777C004608FC /* SceneDelegate.swift in Sources */,
-				EA076B9F2843C07900342E52 /* ViewController+ViewModel.swift in Sources */,
+				EA076B9F2843C07900342E52 /* ComicViewController+ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

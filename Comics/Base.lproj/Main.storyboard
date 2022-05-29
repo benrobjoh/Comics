@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-577" y="82"/>
         </scene>
-        <!--View Controller-->
+        <!--Comic View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Comics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ComicViewController" customModule="Comics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,9 +86,9 @@
                     <navigationItem key="navigationItem" id="REd-6M-iS6">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="key" catalog="system" id="6yo-JH-Hz9">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="zgH-1L-uhk">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="authorizationPressed:" destination="BYZ-38-t0r" id="WYT-hv-RUc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -96,7 +96,6 @@
                         <outlet property="coverImageView" destination="HIV-Rm-1hA" id="fR6-HG-cJJ"/>
                         <outlet property="detailTextView" destination="U9E-H1-PXI" id="oo3-Q4-68v"/>
                         <outlet property="keyBarButtonItem" destination="6yo-JH-Hz9" id="VX4-hT-7Og"/>
-                        <outlet property="refreshBarButtonItem" destination="zgH-1L-uhk" id="1by-L5-uOh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

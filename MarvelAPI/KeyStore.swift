@@ -11,3 +11,10 @@ public protocol KeyStore {
     var publicKey: String? { get set }
     var privateKey: String? { get set }
 }
+
+public extension KeyStore {
+    var needsKeys: Bool {
+        publicKey == nil
+        || privateKey == nil
+    }
+}
