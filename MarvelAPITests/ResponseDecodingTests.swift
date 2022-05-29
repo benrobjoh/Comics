@@ -9,6 +9,7 @@ import XCTest
 import MarvelAPI
 
 class ResponseDecodingTests: XCTestCase {
+    /// Tests whether app can decode a comic from the API
     func testDecodingComicResponse() throws {
         guard let url = Bundle(for: Self.self)
             .url(forResource: "Comic", withExtension: "json") else {
