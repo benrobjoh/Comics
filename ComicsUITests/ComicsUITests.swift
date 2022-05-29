@@ -13,14 +13,17 @@ class ComicsUITests: XCTestCase {
         continueAfterFailure = false
     }
 
-    override func tearDownWithError() throws {
-
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testAppPromptsForKeysIfNoneAreEntered() throws {
         let app = XCUIApplication()
         app.launch()
+
+        XCTAssertTrue(app.alerts["Marvel Comics API Key Required"].exists)
+        // Public Key
+        app.alerts.textFields.allElementsBoundByIndex[0].typeText("123")
+        // Tap done
+        app.alerts.buttons["Done"].tap()
+        // Alert should disappear
+        XCTAssertFalse(app.alerts["Marvel Comics API Key Required"].exists)
 
     }
 }
