@@ -37,19 +37,19 @@
         "urls": [
           {
             "type": "detail",
-            "url": "http://marvel.com/comics/issue/41188/avengers_vs_x-men_2012_1?utm_campaign=apiRef&utm_source=69af986ae578848ecb530a4d112fe594"
+            "url": "http://marvel.com/comics/issue/41188/avengers_vs_x-men_2012_1?"
           },
           {
             "type": "purchase",
-            "url": "http://comicstore.marvel.com/Avengers-VS-X-Men-1/digital-comic/25732?utm_campaign=apiRef&utm_source=69af986ae578848ecb530a4d112fe594"
+            "url": "http://comicstore.marvel.com/Avengers-VS-X-Men-1/digital-comic/25732"
           },
           {
             "type": "reader",
-            "url": "http://marvel.com/digitalcomics/view.htm?iid=25732&utm_campaign=apiRef&utm_source=69af986ae578848ecb530a4d112fe594"
+            "url": "http://marvel.com/digitalcomics/view.htm?iid=25732"
           },
           {
             "type": "inAppLink",
-            "url": "https://applink.marvel.com/issue/25732?utm_campaign=apiRef&utm_source=69af986ae578848ecb530a4d112fe594"
+            "url": "https://applink.marvel.com/issue/25732"
           }
         ],
         "series": {

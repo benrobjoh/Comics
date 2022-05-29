@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA076B9F2843C07900342E52 /* ViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA076B9E2843C07900342E52 /* ViewController+ViewModel.swift */; };
 		EA10F87C2842777C004608FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F87B2842777C004608FC /* AppDelegate.swift */; };
 		EA10F87E2842777C004608FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F87D2842777C004608FC /* SceneDelegate.swift */; };
 		EA10F8802842777C004608FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F87F2842777C004608FC /* ViewController.swift */; };
@@ -16,7 +17,6 @@
 		EA10F8932842777F004608FC /* ComicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F8922842777F004608FC /* ComicsTests.swift */; };
 		EA10F89D2842777F004608FC /* ComicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F89C2842777F004608FC /* ComicsUITests.swift */; };
 		EA10F89F2842777F004608FC /* ComicsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F89E2842777F004608FC /* ComicsUITestsLaunchTests.swift */; };
-		EA10F8F928428267004608FC /* MarvelAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = EA10F8F828428267004608FC /* MarvelAPI.docc */; };
 		EA10F8FF28428267004608FC /* MarvelAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA10F8F528428267004608FC /* MarvelAPI.framework */; };
 		EA10F90628428267004608FC /* MarvelAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10F90528428267004608FC /* MarvelAPIClientTests.swift */; };
 		EA10F90728428267004608FC /* MarvelAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = EA10F8F728428267004608FC /* MarvelAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA076B9E2843C07900342E52 /* ViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ViewModel.swift"; sourceTree = "<group>"; };
 		EA10F8782842777C004608FC /* Comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Comics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA10F87B2842777C004608FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA10F87D2842777C004608FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		EA10F89E2842777F004608FC /* ComicsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EA10F8F528428267004608FC /* MarvelAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA10F8F728428267004608FC /* MarvelAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarvelAPI.h; sourceTree = "<group>"; };
-		EA10F8F828428267004608FC /* MarvelAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MarvelAPI.docc; sourceTree = "<group>"; };
 		EA10F8FE28428267004608FC /* MarvelAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA10F90528428267004608FC /* MarvelAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIClientTests.swift; sourceTree = "<group>"; };
 		EA10F91228428364004608FC /* MarvelAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPIClient.swift; sourceTree = "<group>"; };
@@ -190,6 +190,7 @@
 				EA10F87B2842777C004608FC /* AppDelegate.swift */,
 				EA10F87D2842777C004608FC /* SceneDelegate.swift */,
 				EA10F87F2842777C004608FC /* ViewController.swift */,
+				EA076B9E2843C07900342E52 /* ViewController+ViewModel.swift */,
 				EA10F8812842777C004608FC /* Main.storyboard */,
 				EA10F8842842777E004608FC /* Assets.xcassets */,
 				EA10F8862842777E004608FC /* LaunchScreen.storyboard */,
@@ -223,7 +224,6 @@
 				EA10F91C2842916A004608FC /* Response Objects */,
 				EA10F9162842880C004608FC /* APIRequestConfiguration.swift */,
 				EA10F91428428675004608FC /* KeyStore.swift */,
-				EA10F8F828428267004608FC /* MarvelAPI.docc */,
 				EA10F8F728428267004608FC /* MarvelAPI.h */,
 				EA10F91228428364004608FC /* MarvelAPIClient.swift */,
 			);
@@ -483,6 +483,7 @@
 				EA10F8802842777C004608FC /* ViewController.swift in Sources */,
 				EA10F87C2842777C004608FC /* AppDelegate.swift in Sources */,
 				EA10F87E2842777C004608FC /* SceneDelegate.swift in Sources */,
+				EA076B9F2843C07900342E52 /* ViewController+ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +508,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA10F8F928428267004608FC /* MarvelAPI.docc in Sources */,
 				EA10F91528428675004608FC /* KeyStore.swift in Sources */,
 				EA10F9292842B829004608FC /* ImageResponse.swift in Sources */,
 				EA10F9172842880C004608FC /* APIRequestConfiguration.swift in Sources */,

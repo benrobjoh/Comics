@@ -10,7 +10,7 @@ import CryptoKit
 import UIKit
 
 public class MarvelAPIClient {
-    public let keyStore: KeyStore
+    public var keyStore: KeyStore
     public let session: URLSession
     
     public init(keyStore: KeyStore,
