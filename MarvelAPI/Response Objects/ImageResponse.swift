@@ -8,7 +8,7 @@
 import Foundation
 
 public struct ImageResponse: Decodable {
-    enum Variant: String {
+    public enum Variant: String {
         case small = "portrait_small"
         case medium = "portrait_medium"
         case xlarge = "portrait_xlarge"

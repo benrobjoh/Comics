@@ -7,6 +7,7 @@
 
 import Foundation
 import CryptoKit
+import UIKit
 
 public class MarvelAPIClient {
     public let keyStore: KeyStore
@@ -75,5 +76,14 @@ public class MarvelAPIClient {
         let urlString = "\(path)/\(variant.rawValue).\(pathExtension)"
         guard let url = URL(string: urlString) else { throw URLError(.badURL) }
         return URLRequest(url: url)
+    }
+
+    public func executeImageRequest(from imageResponse: ImageResponse,
+                                    variant: ImageResponse.Variant) async throws -> UIImage? {
+        let request = try configureImageRequest(from: imageResponse,
+                                                variant: variant)
+        let (data, _) = try await session.data(for: request)
+        return UIImage(data: data)
+
     }
 }
