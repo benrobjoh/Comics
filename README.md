@@ -31,3 +31,5 @@ Press ⌘-U to run the unit tests and UI tests.
 ## Libraries
 
 This app does not use any third-party dependencies. It uses UIKit for the user interface, Combine for binding the view model state to the view, CryptoKit for creating an MD5 hash to authenticate with the Marvel API. The tests use XCTest.
+
+![Avengers vs. X-Men](Images/Avengers%20vs%20X-Men.png)
