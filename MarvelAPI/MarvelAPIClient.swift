@@ -10,7 +10,7 @@ import CryptoKit
 import UIKit
 
 /// Client that manages interactions with the Marvel Comics API
-public class MarvelAPIClient {
+public final class MarvelAPIClient {
     /// Storage for authorization keys
     public var keyStore: KeyStore
     /// Session used to make network requests
